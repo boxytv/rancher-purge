@@ -1,7 +1,7 @@
 version: '2'
 services:
   rancher-purge:
-    image: wmbutler/rancher-purge
+    image: boxytv.azurecr.io/rancher-purge
     environment:
       RANCHER_ACCESS_KEY: ${RANCHER_ACCESS_KEY}
       RANCHER_SECRET_KEY: ${RANCHER_SECRET_KEY}
