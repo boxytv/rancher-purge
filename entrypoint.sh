@@ -4,6 +4,7 @@ do
     echo "Checking for inactive hosts every $INTERVAL seconds..."
     rancher hosts -a | grep -w inactive | while read LINE
     do
+        # Delete host
         HOST=$(echo $LINE | cut -d ' ' -f 1)
         echo "Delete $LINE"
         rancher rm --type host $HOST
